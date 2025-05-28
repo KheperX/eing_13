@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Eing - Software Developer",
+  title: "Nateetorn - Software Developer",
   description: "Minimal portfolio showcasing thoughtful software development",
   keywords: "software developer, portfolio, minimal, clean code",
-  authors: [{ name: "Eing" }],
+  authors: [{ name: "Nateetorn" }],
   viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: '/green_logo.png',
+    shortcut: '/green_logo.png',
+    apple: '/green_logo.png',
+  },
 };
 
 export default function RootLayout({

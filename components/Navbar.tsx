@@ -140,7 +140,7 @@ const Navbar = () => {
           {/* Menu Footer */}
           <div className="absolute bottom-8 left-8 right-8">
             <div className="text-xs font-light tracking-widest opacity-60 text-center">
-              EING PORTFOLIO
+              NATEETORN PORTFOLIO
             </div>
           </div>
         </div>

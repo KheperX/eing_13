@@ -25,7 +25,7 @@ const HeroSection = () => {
         {/* Main Heading */}
         <div className="mb-16">
           <h1 className="large-heading japanese-heading mb-8 tracking-tight">
-            EING
+            NATEETORN
           </h1>
           <div className="flex items-center justify-center gap-4">
             <div className="w-16 h-px bg-neutral-900"></div>

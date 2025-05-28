@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Circular Favicon</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        #canvas {
+            border: 2px solid #e5e7eb;
+            border-radius: 50%;
+            margin: 1rem 0;
+        }
+        input[type="file"] {
+            margin: 1rem 0;
+            padding: 0.5rem;
+        }
+        button {
+            background: #22c55e;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            margin: 0.5rem;
+        }
+        button:hover {
+            background: #16a34a;
+        }
+        .preview {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .size-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🟢 Circular Favicon Generator</h1>
+        <p>Upload your green_logo.png to create a circular favicon</p>
+        
+        <input type="file" id="fileInput" accept="image/*">
+        <br>
+        <canvas id="canvas" width="180" height="180"></canvas>
+        
+        <div class="preview">
+            <div>
+                <canvas id="favicon16" width="16" height="16" style="border-radius: 50%;"></canvas>
+                <div class="size-label">16x16</div>
+            </div>
+            <div>
+                <canvas id="favicon32" width="32" height="32" style="border-radius: 50%;"></canvas>
+                <div class="size-label">32x32</div>
+            </div>
+            <div>
+                <canvas id="favicon180" width="180" height="180" style="border-radius: 50%;"></canvas>
+                <div class="size-label">180x180</div>
+            </div>
+        </div>
+        
+        <div>
+            <button onclick="downloadFavicon(16)">Download 16x16</button>
+            <button onclick="downloadFavicon(32)">Download 32x32</button>
+            <button onclick="downloadFavicon(180)">Download 180x180</button>
+            <button onclick="downloadAll()">Download All Sizes</button>
+        </div>
+    </div>
+
+    <script>
+        let originalImage = null;
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const img = new Image();
+                    img.onload = function() {
+                        originalImage = img;
+                        drawCircularImage();
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function drawCircularImage() {
+            if (!originalImage) return;
+
+            // Draw on main canvas
+            drawCircularOnCanvas('canvas', 180);
+            
+            // Draw previews
+            drawCircularOnCanvas('favicon16', 16);
+            drawCircularOnCanvas('favicon32', 32);
+            drawCircularOnCanvas('favicon180', 180);
+        }
+
+        function drawCircularOnCanvas(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Create circular clipping path
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, 2 * Math.PI);
+            ctx.clip();
+            
+            // Draw image
+            ctx.drawImage(originalImage, 0, 0, size, size);
+        }
+
+        function downloadFavicon(size) {
+            if (!originalImage) {
+                alert('Please upload an image first!');
+                return;
+            }
+
+            // Create temporary canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // Create circular clipping path
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, 2 * Math.PI);
+            ctx.clip();
+            
+            // Draw image
+            ctx.drawImage(originalImage, 0, 0, size, size);
+            
+            // Download
+            const link = document.createElement('a');
+            link.download = `favicon-${size}x${size}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        function downloadAll() {
+            if (!originalImage) {
+                alert('Please upload an image first!');
+                return;
+            }
+            
+            const sizes = [16, 32, 48, 64, 72, 96, 120, 144, 152, 180, 192, 512];
+            
+            sizes.forEach(size => {
+                setTimeout(() => downloadFavicon(size), 100 * sizes.indexOf(size));
+            });
+        }
+    </script>
+</body>
+</html>

@@ -16,7 +16,7 @@ export default function Home() {
   const [introComplete, setIntroComplete] = useState(false)
   const [showContent, setShowContent] = useState(false)
   const isClient = useIsClient()
-  const [hasVisited, setHasVisited] = useLocalStorage('eing-portfolio-visited')
+  const [hasVisited, setHasVisited] = useLocalStorage('nateetorn-portfolio-visited')
 
   // Check if user has visited before
   useEffect(() => {

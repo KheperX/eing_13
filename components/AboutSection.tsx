@@ -62,15 +62,44 @@ const AboutSection = () => {
                   'Full-Stack Development',
                   'System Architecture',
                   'API Design',
-                  'Database Optimization',
-                  'Cloud Infrastructure',
-                  'Performance Tuning'
+                  'Database Management',
+                  'DevOps & Deployment',
+                  'Security Testing',
+                  'Project Management',
+                  'Version Control'
                 ].map((skill, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-1 h-1 bg-neutral-900 rounded-full"></div>
                     <span className="text-sm font-light tracking-wide">{skill}</span>
                   </div>
                 ))}
+              </div>
+
+              {/* Detailed Skills */}
+              <div className="mt-8 pt-6 border-t border-neutral-200">
+                <h4 className="text-lg font-light mb-4 japanese-heading">Technical Skills</h4>
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-xs font-light tracking-widest opacity-60">DEVELOPMENT</span>
+                    <p className="text-sm font-light mt-1">JavaScript, TypeScript, Python, React, Next.js, Node.js</p>
+                  </div>
+                  <div>
+                    <span className="text-xs font-light tracking-widest opacity-60">DATABASE</span>
+                    <p className="text-sm font-light mt-1">MySQL, PostgreSQL, MongoDB, HeidiSQL</p>
+                  </div>
+                  <div>
+                    <span className="text-xs font-light tracking-widest opacity-60">DEVOPS & TOOLS</span>
+                    <p className="text-sm font-light mt-1">Docker, Git, GitHub, CI/CD, Cloud Deployment</p>
+                  </div>
+                  <div>
+                    <span className="text-xs font-light tracking-widest opacity-60">SECURITY & TESTING</span>
+                    <p className="text-sm font-light mt-1">Burp Suite, Penetration Testing, Security Auditing</p>
+                  </div>
+                  <div>
+                    <span className="text-xs font-light tracking-widest opacity-60">PROJECT MANAGEMENT</span>
+                    <p className="text-sm font-light mt-1">ClickUp, Agile, Scrum, Team Collaboration</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -109,6 +138,31 @@ const AboutSection = () => {
                           className="w-12 h-12 border border-neutral-200 rounded-full flex items-center justify-center text-xs font-light hover-scale"
                         >
                           {tech}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tools & Software */}
+                  <div className="pt-8 border-t border-neutral-200">
+                    <div className="text-center mb-6">
+                      <span className="text-xs font-light tracking-widest opacity-60">TOOLS & SOFTWARE</span>
+                    </div>
+                    <div className="grid grid-cols-3 gap-3">
+                      {[
+                        { name: 'Git', icon: '🌿' },
+                        { name: 'Docker', icon: '🐳' },
+                        { name: 'ClickUp', icon: '📋' },
+                        { name: 'Burp Suite', icon: '🔒' },
+                        { name: 'HeidiSQL', icon: '🗃️' },
+                        { name: 'VS Code', icon: '💻' }
+                      ].map((tool, index) => (
+                        <div
+                          key={index}
+                          className="flex flex-col items-center p-3 border border-neutral-200 rounded-lg hover-scale group"
+                        >
+                          <span className="text-lg mb-1 group-hover:scale-110 transition-transform duration-300">{tool.icon}</span>
+                          <span className="text-xs font-light text-center">{tool.name}</span>
                         </div>
                       ))}
                     </div>

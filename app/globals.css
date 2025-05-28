@@ -21,6 +21,25 @@ body {
   line-height: 1.8;
 }
 
+/* Custom favicon styles */
+link[rel="icon"], 
+link[rel="shortcut icon"], 
+link[rel="apple-touch-icon"] {
+  border-radius: 50% !important;
+}
+
+/* Logo styles */
+.logo-circular {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.favicon-circular {
+  border-radius: 50%;
+  background: white;
+  padding: 2px;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 3px;
