@@ -128,11 +128,48 @@ All animations are defined in `globals.css`:
 
 ## Deployment
 
+### Deploy to Vercel
+
 The easiest way to deploy is using [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme):
 
+1. **Build the project locally first:**
 ```bash
 npm run build
 ```
+
+2. **Deploy via Vercel CLI:**
+```bash
+npm i -g vercel
+vercel --prod
+```
+
+3. **Or connect your GitHub repository to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Import your GitHub repository
+   - Make sure to set Framework Preset to "Next.js"
+   - Deploy!
+
+### Common Deployment Issues:
+
+**404 Error on Vercel:**
+- Make sure `vercel.json` is configured correctly
+- Check that Framework Preset is set to "Next.js" (not "Other")
+- Verify `next.config.js` doesn't have conflicting settings
+- Ensure all dependencies are properly installed
+
+**Build Failures:**
+```bash
+# Make sure all dependencies are installed
+npm install --save-dev autoprefixer eslint eslint-config-next
+
+# Clear cache and rebuild
+npm run build
+```
+
+**Environment Variables:**
+- Add environment variables in Vercel dashboard under Settings > Environment Variables
+- For database: `DATABASE_URL`
+- For other configs as needed
 
 ## Database Setup (Optional)
 
