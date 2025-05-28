@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: false,
-  images: {
-    unoptimized: true
-  }
+  // Empty config for Next.js 15 with App Router
 }
 
 module.exports = nextConfig
