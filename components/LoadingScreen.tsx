@@ -61,7 +61,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
         {/* Main Logo/Name */}
         <div className="space-y-4">
           <h1 className="text-6xl md:text-8xl font-thin japanese-heading tracking-tight">
-            EING
+            NATEETORN
           </h1>
           <div className="flex items-center justify-center gap-4">
             <div className="w-12 h-px bg-neutral-900"></div>

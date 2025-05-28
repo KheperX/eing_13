@@ -88,20 +88,20 @@ const ContactSection = () => {
               {[
                 {
                   label: "Email",
-                  value: "hello@eing.dev",
-                  href: "mailto:hello@eing.dev",
+                  value: "nateetorn13e@outlook.com",
+                  href: "mailto:nateetorn13e@outlook.com",
                   description: "For project inquiries and collaborations",
                 },
                 {
                   label: "LinkedIn",
-                  value: "/in/eing-dev",
-                  href: "https://linkedin.com/in/eing-dev",
+                  value: "/in/nateetorn-puangbubpa",
+                  href: "https://linkedin.com/in/nateetorn-puangbubpa",
                   description: "Professional networking and connections",
                 },
                 {
                   label: "GitHub",
-                  value: "/eing-codes",
-                  href: "https://github.com/eing-codes",
+                  value: "/KheperX",
+                  href: "https://github.com/KheperX",
                   description: "Open source contributions and projects",
                 },
               ].map((contact, index) => (

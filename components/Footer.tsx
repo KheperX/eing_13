@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="text-2xl font-light japanese-heading tracking-widest">
-              Eing
+              Nateetorn
             </div>
             <p className="text-sm font-light leading-relaxed opacity-80">
               Software developer crafting digital experiences with precision and
@@ -43,12 +43,12 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               {[
-                { name: "GitHub", href: "https://github.com/eing-codes" },
+                { name: "GitHub", href: "https://github.com/KheperX" },
                 {
                   name: "LinkedIn",
-                  href: "https://linkedin.com/in/eing-dev",
+                  href: "https://linkedin.com/in/nateetorn-puangbubpa",
                 },
-                { name: "Email", href: "mailto:hello@eing.dev" },
+                { name: "Email", href: "mailto:nateetorn13e@outlook.com" },
                 { name: "Twitter", href: "https://twitter.com/eing_dev" },
               ].map((link, index) => (
                 <a
@@ -72,7 +72,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Copyright */}
             <div className="text-xs font-light opacity-60">
-              © {currentYear} Eing. All rights reserved.
+              © {currentYear} Nateetorn. All rights reserved.
             </div>
 
             {/* Status */}

@@ -42,7 +42,7 @@ const IntroAnimation = ({ onComplete }: IntroAnimationProps) => {
             step >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <h1 className="text-7xl md:text-9xl font-thin japanese-heading tracking-tight">
-              EING
+              NATEETORN
             </h1>
           </div>
 
