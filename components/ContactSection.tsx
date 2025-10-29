@@ -45,7 +45,8 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="section-large bg-white relative"
+      className="section-large relative"
+      style={{ backgroundColor: "#f6f6f6" }}
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-8">
@@ -239,23 +240,6 @@ const ContactSection = () => {
                   </p>
                 </div>
               </form>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-24 text-center reveal">
-          <div className="max-w-2xl mx-auto space-y-8">
-            <p className="text-lg font-light opacity-80">
-              Prefer a more direct approach?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-minimal px-12 py-4 bg-transparent text-neutral-900">
-                SCHEDULE A CALL
-              </button>
-              <button className="btn-minimal px-12 py-4 bg-transparent text-neutral-900">
-                VIEW CALENDAR
-              </button>
             </div>
           </div>
         </div>
