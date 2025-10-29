@@ -18,7 +18,14 @@ const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // ไปตรงหัวข้อของ section เลย
+      const elementTop = element.offsetTop;
+      
+      window.scrollTo({
+        top: elementTop,
+        behavior: "smooth"
+      });
+      
       setIsMobileMenuOpen(false);
     }
   };

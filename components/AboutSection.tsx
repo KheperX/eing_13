@@ -24,7 +24,7 @@ const AboutSection = () => {
   }, [])
 
   return (
-    <section id="about" className="section-large bg-white relative" ref={sectionRef}>
+    <section id="about" className="section-large relative text-white" style={{ backgroundColor: '#314343' }} ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-8">
         
         {/* Section Number */}
@@ -69,14 +69,14 @@ const AboutSection = () => {
                   'Version Control'
                 ].map((skill, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <div className="w-1 h-1 bg-neutral-900 rounded-full"></div>
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
                     <span className="text-sm font-light tracking-wide">{skill}</span>
                   </div>
                 ))}
               </div>
 
               {/* Detailed Skills */}
-              <div className="mt-8 pt-6 border-t border-neutral-200">
+              <div className="mt-8 pt-6 border-t border-white/20">
                 <h4 className="text-lg font-light mb-4 japanese-heading">Technical Skills</h4>
                 <div className="space-y-4">
                   <div>
@@ -108,7 +108,7 @@ const AboutSection = () => {
           <div className="reveal">
             <div className="relative">
               {/* Main Card */}
-              <div className="card-minimal p-12 rounded-lg">
+              <div className="card-minimal p-12 rounded-lg text-black">
                 <div className="space-y-8">
                   
                   {/* Stats */}
@@ -127,7 +127,7 @@ const AboutSection = () => {
                   </div>
 
                   {/* Tech Stack Visual */}
-                  <div className="pt-8 border-t border-neutral-200">
+                  <div className="pt-8 border-t border-white/20">
                     <div className="text-center mb-6">
                       <span className="text-xs font-light tracking-widest opacity-60">TECH STACK</span>
                     </div>
@@ -135,7 +135,7 @@ const AboutSection = () => {
                       {['JS', 'TS', 'React', 'Node', 'Python', 'SQL'].map((tech, index) => (
                         <div
                           key={index}
-                          className="w-12 h-12 border border-neutral-200 rounded-full flex items-center justify-center text-xs font-light hover-scale"
+                          className="w-12 h-12 border border-white/30 rounded-full flex items-center justify-center text-xs font-light hover-scale"
                         >
                           {tech}
                         </div>
@@ -144,7 +144,7 @@ const AboutSection = () => {
                   </div>
 
                   {/* Tools & Software */}
-                  <div className="pt-8 border-t border-neutral-200">
+                  <div className="pt-8 border-t border-white/20">
                     <div className="text-center mb-6">
                       <span className="text-xs font-light tracking-widest opacity-60">TOOLS & SOFTWARE</span>
                     </div>
@@ -154,12 +154,12 @@ const AboutSection = () => {
                         { name: 'Docker', icon: '🐳' },
                         { name: 'ClickUp', icon: '📋' },
                         { name: 'Burp Suite', icon: '🔒' },
-                        { name: 'HeidiSQL', icon: '🗃️' },
+                        { name: 'Claude Code', icon: '🤖' },
                         { name: 'VS Code', icon: '💻' }
                       ].map((tool, index) => (
                         <div
                           key={index}
-                          className="flex flex-col items-center p-3 border border-neutral-200 rounded-lg hover-scale group"
+                          className="flex flex-col items-center p-3 border border-white/30 rounded-lg hover-scale group"
                         >
                           <span className="text-lg mb-1 group-hover:scale-110 transition-transform duration-300">{tool.icon}</span>
                           <span className="text-xs font-light text-center">{tool.name}</span>
@@ -171,8 +171,8 @@ const AboutSection = () => {
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 border border-neutral-300 rounded-full bg-white"></div>
-              <div className="absolute -bottom-4 -left-4 w-4 h-4 bg-neutral-900 rounded-full"></div>
+              <div className="absolute -top-4 -right-4 w-8 h-8 border border-white/30 rounded-full bg-white/10"></div>
+              <div className="absolute -bottom-4 -left-4 w-4 h-4 bg-white rounded-full"></div>
             </div>
           </div>
         </div>
@@ -184,9 +184,9 @@ const AboutSection = () => {
               "The best code is not just functional, but beautiful."
             </blockquote>
             <div className="mt-8 flex items-center justify-center gap-4">
-              <div className="w-8 h-px bg-neutral-900"></div>
+              <div className="w-8 h-px bg-white"></div>
               <span className="text-xs font-light tracking-widest">PERSONAL MOTTO</span>
-              <div className="w-8 h-px bg-neutral-900"></div>
+              <div className="w-8 h-px bg-white"></div>
             </div>
           </div>
         </div>
