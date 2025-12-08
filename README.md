@@ -1,199 +1,287 @@
-# Eing Portfolio
+# 🌟 Nateetorn Portfolio Website
 
-A modern, minimal portfolio website built with Next.js 15 and TypeScript.
+A modern, minimal portfolio website showcasing software development expertise with clean design and smooth animations.
 
-## Features
+## ✨ Features
 
-- ✨ **Modern Design**: Clean, minimal aesthetic with smooth animations
-- 🎭 **Loading Animation**: Cinematic intro sequence with loading screen
-- 📱 **Responsive**: Mobile-first design that works on all devices
-- ⚡ **Performance**: Optimized with Next.js App Router
-- 🎨 **Tailwind CSS**: Utility-first CSS framework
-- 🔤 **Typography**: Beautiful typography with Inter and Noto Sans JP fonts
-- 📊 **Database Ready**: Prisma ORM setup for future features
-- 🌟 **Smooth Scrolling**: Buttery smooth scroll animations
-- 🎯 **Intersection Observer**: Reveal animations on scroll
+- 🎨 **Minimal Design**: Clean, professional aesthetic with attention to detail
+- 🎭 **Cinematic Loading**: Elegant loading screen with intro animation sequence
+- 📱 **Fully Responsive**: Mobile-first design that works perfectly on all devices
+- ⚡ **High Performance**: Built with Next.js 15 App Router for optimal speed
+- 🎯 **Interactive Elements**: Smooth hover effects and reveal animations
+- 🔄 **Smooth Scrolling**: Buttery smooth scroll behavior and transitions
+- 🌐 **SEO Optimized**: Proper meta tags and structured data
+- 🛡️ **Type Safe**: Built with TypeScript for robust development
+- 🎪 **Advanced Animations**: CSS animations with Intersection Observer API
+- 🔧 **Modern Tooling**: Latest web development stack and best practices
 
-## Dependencies
+## 🛠️ Tech Stack
 
-### Core Dependencies:
-- **Next.js 15.1.1** - React framework with App Router
-- **React 19** - UI library
-- **TypeScript 5** - Type safety
-- **Tailwind CSS 3.4.1** - Utility-first CSS framework
-- **Prisma 6.1.0** - Database ORM (ready to use)
-- **PostgreSQL** - Database driver (pg package)
+### **Core Technologies**
+- **Framework**: Next.js 15.1.1 with App Router
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 3.4.1
+- **Database**: Prisma 6.1.0 + PostgreSQL (ready to use)
+- **Deployment**: Vercel Platform
 
-### Dev Dependencies:
-- **autoprefixer** - PostCSV vendor prefixes
-- **postcss** - CSS processing tool
-- **eslint** - Code linting
-- **@types packages** - TypeScript definitions
+### **Development Tools**
+- **Version Control**: Git & GitHub
+- **Containerization**: Docker
+- **Project Management**: ClickUp
+- **Security Testing**: Burp Suite
+- **Database Management**: HeidiSQL
+- **Code Editor**: VS Code
 
-### Installation Command:
+### **Design & UX**
+- **Typography**: Inter & Noto Sans JP fonts
+- **Icons**: Custom SVG icons and emojis
+- **Color Scheme**: Neutral palette with green accents
+- **Layout**: CSS Grid and Flexbox
+- **Animations**: Custom CSS keyframes and transitions
+
+## 🎯 Project Sections
+
+### 1. **Hero Section**
+- Large typography with animated text rotation
+- Professional introduction
+- Call-to-action buttons
+- Scroll indicator
+
+### 2. **About Section**
+- Personal philosophy and approach
+- Technical skills showcase
+- Statistics and achievements
+- Comprehensive tool listing
+
+### 3. **Work Section**
+- Project portfolio with hover effects
+- Technology stacks used
+- Interactive project cards
+- Performance metrics
+
+### 4. **Contact Section**
+- Professional contact information
+- Contact form with validation
+- Social media links
+- Availability status
+
+### 5. **Footer**
+- Site navigation
+- Social links
+- Copyright information
+- Back to top functionality
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn package manager
+- Git for version control
+
+### Installation
+
+1. **Clone the repository:**
 ```bash
-# Install all dependencies
-npm install
+git clone https://github.com/KheperX/eing_13.git
+cd eing_13
+```
 
-# If missing autoprefixer error occurs:
+2. **Install dependencies:**
+```bash
+npm install
+```
+
+**Note:** If you encounter missing dependency errors:
+```bash
 npm install --save-dev autoprefixer eslint eslint-config-next
 ```
 
-## Getting Started
-
-1. Install dependencies:
-```bash
-npm install
-```
-
-**Note:** If you encounter an error about missing 'autoprefixer', run:
-```bash
-npm install --save-dev autoprefixer eslint eslint-config-next
-```
-
-2. Run the development server:
+3. **Run development server:**
 ```bash
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open in browser:**
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Troubleshooting
+## 📁 Project Structure
 
-### Common Issues:
+```
+eing_13/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles & animations
+│   ├── layout.tsx         # Root layout component
+│   ├── page.tsx           # Main page component
+│   ├── not-found.tsx      # 404 error page
+│   └── favicon.ico        # Site icon
+│
+├── components/            # React components
+│   ├── LoadingScreen.tsx  # Initial loading animation
+│   ├── IntroAnimation.tsx # Welcome intro sequence  
+│   ├── Navbar.tsx         # Navigation component
+│   ├── HeroSection.tsx    # Hero/landing section
+│   ├── AboutSection.tsx   # About section with skills
+│   ├── WorkSection.tsx    # Projects showcase
+│   ├── ContactSection.tsx # Contact form and info
+│   └── Footer.tsx         # Footer component
+│
+├── hooks/                 # Custom React hooks
+│   └── useClient.ts       # Client-side hooks
+│
+├── public/               # Static assets
+│   ├── green_logo.png    # Main logo/favicon
+│   ├── Number_13.png     # Additional assets
+│   └── Number_13e.png    # Additional assets
+│
+├── prisma/               # Database schema
+│   └── schema.prisma     # Database models
+│
+├── next.config.js        # Next.js configuration
+├── tailwind.config.js    # Tailwind CSS config
+├── tsconfig.json         # TypeScript configuration
+├── package.json          # Dependencies and scripts
+└── README.md            # Project documentation
+```
 
-**Error: Cannot find module 'autoprefixer'**
+## 🎨 Customization Guide
+
+### **Personal Information**
+Update your details in these files:
+- `app/layout.tsx` - Site metadata and title
+- `components/HeroSection.tsx` - Name and main heading
+- `components/AboutSection.tsx` - Bio, skills, and statistics  
+- `components/ContactSection.tsx` - Contact information
+- `components/Footer.tsx` - Footer information
+
+### **Contact Information**
+Current contact details:
+- **Email**: nateetorn13e@outlook.com  
+- **LinkedIn**: [Nateetorn Puangbubpa](https://linkedin.com/in/nateetorn-puangbubpa)
+- **GitHub**: [KheperX](https://github.com/KheperX)
+
+### **Styling & Design**
+- **Colors**: Edit Tailwind config for color scheme changes
+- **Fonts**: Modify `globals.css` for typography updates
+- **Animations**: Customize CSS keyframes and transitions
+- **Layout**: Adjust component layouts and spacing
+
+### **Content Updates**
+- **Projects**: Edit `WorkSection.tsx` to showcase your work
+- **Skills**: Update `AboutSection.tsx` with your expertise
+- **Biography**: Personalize the about section content
+
+## 🚀 Deployment
+
+### **Deploy with Vercel (Recommended)**
+
+1. **Connect to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Import your GitHub repository  
+   - Set Framework Preset to "Next.js"
+
+2. **Environment Variables:**
+   Add in Vercel dashboard if needed:
+   ```
+   DATABASE_URL=your_database_url
+   ```
+
+3. **Deploy:**
+   - Push to main branch triggers auto-deployment
+   - Monitor build logs for any issues
+
+### **Manual Deployment**
 ```bash
-# Solution: Install missing dependencies
-npm install --save-dev autoprefixer eslint eslint-config-next
-```
-
-**Build errors with PostCSS**
-```bash
-# Make sure all PostCSS dependencies are installed
-npm install --save-dev postcss autoprefixer tailwindcss
-```
-
-**TypeScript path mapping issues**
-- Make sure `tsconfig.json` has correct `baseUrl` and `paths` settings
-- Verify that `@/*` maps to `./src/*`
-
-**Next.js version compatibility**
-- This project uses Next.js 15.1.1 with App Router
-- Make sure all config files use the correct format (.js instead of .ts)
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── globals.css      # Global styles and animations
-│   ├── layout.tsx       # Root layout component
-│   └── page.tsx         # Main page component
-└── components/
-    ├── LoadingScreen.tsx    # Initial loading animation
-    ├── IntroAnimation.tsx   # Welcome intro sequence
-    ├── Navbar.tsx          # Navigation component
-    ├── HeroSection.tsx     # Hero/landing section
-    ├── AboutSection.tsx    # About section with skills
-    ├── WorkSection.tsx     # Projects showcase
-    ├── ContactSection.tsx  # Contact form and info
-    └── Footer.tsx          # Footer component
-```
-
-## Customization
-
-### Personal Information
-Update your personal information in the following files:
-- `src/components/LoadingScreen.tsx` - Change name in loading screen
-- `src/components/HeroSection.tsx` - Update hero section content
-- `src/components/AboutSection.tsx` - Modify about content and skills
-- `src/components/WorkSection.tsx` - Add your projects
-- `src/components/ContactSection.tsx` - Update contact information
-- `src/app/layout.tsx` - Change site metadata
-
-### Colors & Styling
-The design uses a neutral color palette defined in Tailwind CSS:
-- Primary: `neutral-900` (dark)
-- Background: `neutral-50` (light)
-- Text: `neutral-900`
-- Accents: Various neutral shades
-
-### Animations
-All animations are defined in `globals.css`:
-- Reveal animations (fade, slide, scale)
-- Hover effects
-- Loading animations
-- Cinematic transitions
-
-## Deployment
-
-### Deploy to Vercel
-
-The easiest way to deploy is using [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme):
-
-1. **Build the project locally first:**
-```bash
+# Build the project
 npm run build
-```
 
-2. **Deploy via Vercel CLI:**
-```bash
+# Deploy with Vercel CLI
 npm i -g vercel
 vercel --prod
 ```
 
-3. **Or connect your GitHub repository to Vercel:**
-   - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Make sure to set Framework Preset to "Next.js"
-   - Deploy!
+## 🐛 Troubleshooting
 
-### Common Deployment Issues:
+### **Common Issues**
 
-**404 Error on Vercel:**
-- Make sure `vercel.json` is configured correctly
-- Check that Framework Preset is set to "Next.js" (not "Other")
-- Verify `next.config.js` doesn't have conflicting settings
-- Ensure all dependencies are properly installed
-
-**Build Failures:**
+**❌ Cannot find module 'autoprefixer'**
 ```bash
-# Make sure all dependencies are installed
 npm install --save-dev autoprefixer eslint eslint-config-next
+```
 
-# Clear cache and rebuild
+**❌ Build errors with PostCSS**
+```bash
+npm install --save-dev postcss autoprefixer tailwindcss
+```
+
+**❌ 404 Error on Vercel deployment**
+- Check Framework Preset is set to "Next.js"
+- Verify `vercel.json` configuration
+- Ensure all dependencies are installed
+
+**❌ Hydration errors**
+- Clear browser cache and restart dev server
+- Check for client/server rendering mismatches
+
+**❌ TypeScript path mapping issues**
+- Verify `tsconfig.json` baseUrl and paths settings
+- Ensure `@/*` maps to the correct directory
+
+## 🔧 Development Scripts
+
+```bash
+# Development server
+npm run dev
+
+# Production build  
 npm run build
+
+# Start production server
+npm run start
+
+# Lint code
+npm run lint
+
+# Type checking
+npx tsc --noEmit
 ```
 
-**Environment Variables:**
-- Add environment variables in Vercel dashboard under Settings > Environment Variables
-- For database: `DATABASE_URL`
-- For other configs as needed
+## 📈 Performance Features
 
-## Database Setup (Optional)
+- **Image Optimization**: Next.js automatic image optimization
+- **Code Splitting**: Automatic route-based code splitting
+- **Lazy Loading**: Components load when needed
+- **Caching**: Optimized caching strategies
+- **Bundle Analysis**: Monitor bundle size and performance
 
-If you want to add backend features:
+## 🛡️ Security Features
 
-1. Set up your database URL in `.env`:
-```bash
-DATABASE_URL="postgresql://..."
-```
+- **Type Safety**: Full TypeScript implementation
+- **Input Validation**: Form validation and sanitization
+- **XSS Protection**: Secure rendering practices  
+- **HTTPS Only**: Secure connection enforcement
+- **Security Headers**: Proper HTTP security headers
 
-2. Generate Prisma client:
-```bash
-npx prisma generate
-```
+## 🤝 Contributing
 
-3. Run migrations:
-```bash
-npx prisma db push
-```
+This is a personal portfolio project, but suggestions and feedback are welcome!
 
-## License
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes  
+4. Submit a pull request
+
+## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
+## 📞 Contact & Support
+
+- **Email**: nateetorn13e@outlook.com
+- **LinkedIn**: [Nateetorn Puangbubpa](https://linkedin.com/in/nateetorn-puangbubpa)  
+- **GitHub**: [KheperX](https://github.com/KheperX)
+
 ---
 
-Built with ❤️ using Next.js and Tailwind CSS
+**Built with ❤️ using modern web technologies and best practices.**
+
+*Last updated: May 2025*
